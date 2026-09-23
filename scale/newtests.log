@@ -1,0 +1,8 @@
+............./home/ubuntu/jobhunt-agent/tests/test_prompt_budget.py:45: ResourceWarning: unclosed file <_io.TextIOWrapper name='/home/ubuntu/jobhunt-agent/engine/tools/prompt_budget.py' mode='r' encoding='UTF-8'>
+  open(pb.__file__).read())
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+........
+----------------------------------------------------------------------
+Ran 21 tests in 0.050s
+
+OK

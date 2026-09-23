@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Generated/scraped data and one-off scratch (agent-context waste)
+data/
+scratch/
+
+# Backups and duplicate snapshots
+*.bak*
+*.prompt.*
+
+# Restructure tooling (one-shot, not part of the project)
+restructure.py
+restructure_manifest.tsv

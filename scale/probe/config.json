@@ -1,0 +1,8 @@
+{
+ "budget": {
+  "daily_usd": 0.25,
+  "on_exceed": "throttle",
+  "throttle_rate": 0.5,
+  "_comment": "The per-account model budget. The engine enforces it before a sweep spends anything; the tenant config is the source of truth, and this copy is what an unattended run reads."
+ }
+}

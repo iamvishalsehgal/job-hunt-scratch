@@ -1,0 +1,187 @@
+{
+ "slope": 0.09433446601593648,
+ "intercept": 22067.43563043339,
+ "r2": 0.16188682019118594,
+ "points": [
+  {
+   "prof": "vishal",
+   "ts": "20260921233631",
+   "chars": 36725,
+   "first_in": 25776,
+   "calls": 49,
+   "sum_in": 3598169,
+   "sum_cached": 3527040,
+   "sum_out": 31598
+  },
+  {
+   "prof": "vishal",
+   "ts": "20260922024731",
+   "chars": 36725,
+   "first_in": 25776,
+   "calls": 71,
+   "sum_in": 5947515,
+   "sum_cached": 5852416,
+   "sum_out": 36874
+  },
+  {
+   "prof": "vishal",
+   "ts": "20260922055731",
+   "chars": 36725,
+   "first_in": 25776,
+   "calls": 54,
+   "sum_in": 3727370,
+   "sum_cached": 3677952,
+   "sum_out": 29194
+  },
+  {
+   "prof": "vishal",
+   "ts": "20260922090531",
+   "chars": 40449,
+   "first_in": 25876,
+   "calls": 53,
+   "sum_in": 3655535,
+   "sum_cached": 3565056,
+   "sum_out": 29277
+  },
+  {
+   "prof": "vishal",
+   "ts": "20260922121531",
+   "chars": 41215,
+   "first_in": 26083,
+   "calls": 54,
+   "sum_in": 3776053,
+   "sum_cached": 3720832,
+   "sum_out": 31232
+  },
+  {
+   "prof": "vishal",
+   "ts": "20260922152831",
+   "chars": 41215,
+   "first_in": 26083,
+   "calls": 59,
+   "sum_in": 5505319,
+   "sum_cached": 5416576,
+   "sum_out": 41648
+  },
+  {
+   "prof": "vishal",
+   "ts": "20260922184031",
+   "chars": 45388,
+   "first_in": 27351,
+   "calls": 74,
+   "sum_in": 6685306,
+   "sum_cached": 6600832,
+   "sum_out": 47474
+  },
+  {
+   "prof": "vishal",
+   "ts": "20260922213132",
+   "chars": 48397,
+   "first_in": 32274,
+   "calls": 62,
+   "sum_in": 6437180,
+   "sum_cached": 6321792,
+   "sum_out": 53021
+  },
+  {
+   "prof": "vishal",
+   "ts": "20260922220031",
+   "chars": 67878,
+   "first_in": 33192,
+   "calls": 27,
+   "sum_in": 2081020,
+   "sum_cached": 2012928,
+   "sum_out": 35798
+  },
+  {
+   "prof": "nhung",
+   "ts": "20260921212834",
+   "chars": 50790,
+   "first_in": 24614,
+   "calls": 69,
+   "sum_in": 4491650,
+   "sum_cached": 4369536,
+   "sum_out": 48298
+  },
+  {
+   "prof": "nhung",
+   "ts": "20260922004634",
+   "chars": 51888,
+   "first_in": 25397,
+   "calls": 58,
+   "sum_in": 4069654,
+   "sum_cached": 3928448,
+   "sum_out": 43075
+  },
+  {
+   "prof": "nhung",
+   "ts": "20260922043634",
+   "chars": 51888,
+   "first_in": 25368,
+   "calls": 132,
+   "sum_in": 10203298,
+   "sum_cached": 10018944,
+   "sum_out": 66014
+  },
+  {
+   "prof": "nhung",
+   "ts": "20260922080434",
+   "chars": 55446,
+   "first_in": 25522,
+   "calls": 90,
+   "sum_in": 6520095,
+   "sum_cached": 6376320,
+   "sum_out": 54308
+  },
+  {
+   "prof": "nhung",
+   "ts": "20260922114034",
+   "chars": 56665,
+   "first_in": 25716,
+   "calls": 56,
+   "sum_in": 3408010,
+   "sum_cached": 3287936,
+   "sum_out": 38208
+  },
+  {
+   "prof": "nhung",
+   "ts": "20260922150634",
+   "chars": 56665,
+   "first_in": 25716,
+   "calls": 87,
+   "sum_in": 7176955,
+   "sum_cached": 6986496,
+   "sum_out": 57246
+  },
+  {
+   "prof": "nhung",
+   "ts": "20260922182634",
+   "chars": 59728,
+   "first_in": 26853,
+   "calls": 102,
+   "sum_in": 7743702,
+   "sum_cached": 7551872,
+   "sum_out": 61957
+  },
+  {
+   "prof": "nhung",
+   "ts": "20260922214151",
+   "chars": 61043,
+   "first_in": 27063,
+   "calls": 58,
+   "sum_in": 4021245,
+   "sum_cached": 3874816,
+   "sum_out": 50733
+  },
+  {
+   "prof": "nhung",
+   "ts": "20260922220035",
+   "chars": 63440,
+   "first_in": 27893,
+   "calls": 18,
+   "sum_in": 801249,
+   "sum_cached": 731904,
+   "sum_out": 18156
+  }
+ ]
+}

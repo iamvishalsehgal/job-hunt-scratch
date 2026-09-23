@@ -1,0 +1,267 @@
+...........................................................................................................................................................................................................................note: re-running with /home/ubuntu/.hermes/.venv-gws/bin/python (this interpreter has no Google client libraries)
+   build_tracker.py rc=0 build_tracker.py status=ok rows=1 rendered=0 statuses=Submitted=1
+   verify_tracker.py rc=0 verify_tracker status=ok rows=2 cols=12 source=/tmp/tmpv1l46lso/build_tracker.py
+updated 0 row(s):
+    ADDED 2 Alpha B.V. - Data Engineer -> Submitted
+   sheet pushed: the candidate's Google Sheet is current
+.note: re-running with /home/ubuntu/.hermes/.venv-gws/bin/python (this interpreter has no Google client libraries)
+   build_tracker.py rc=0 build_tracker.py status=ok rows=1 rendered=0 statuses=Submitted=1
+   verify_tracker.py rc=0 verify_tracker status=ok rows=2 cols=12 source=/tmp/tmptgwy4xdc/build_tracker.py
+updated 0 row(s):
+    ADDED 2 Acme Analytics B.V. - Analytics Engineer -> Submitted
+   sheet pushed: the candidate's Google Sheet is current
+.note: re-running with /home/ubuntu/.hermes/.venv-gws/bin/python (this interpreter has no Google client libraries)
+   build_tracker.py rc=0 build_tracker.py status=ok rows=1 rendered=0 statuses=Submitted=1
+   verify_tracker.py rc=0 verify_tracker status=ok rows=1 cols=12 source=/tmp/tmpfig6lf3g/build_tracker.py
+updated 1 row(s):
+    1 Acme Analytics B.V. - Data Engineer -> Interview (exact)
+   sheet pushed: the candidate's Google Sheet is current
+.note: re-running with /home/ubuntu/.hermes/.venv-gws/bin/python (this interpreter has no Google client libraries)
+   build_tracker.py rc=0 build_tracker.py status=ok rows=1 rendered=0 statuses=Submitted=1
+   verify_tracker.py rc=0 verify_tracker status=ok rows=3 cols=12 source=/tmp/tmp6c1a6373/build_tracker.py
+updated 0 row(s):
+    ADDED 2 Alpha B.V. - Data Engineer -> Submitted
+    ADDED 3 Beta B.V. - Integration Engineer -> Submitted
+   sheet pushed: the candidate's Google Sheet is current
+...............................................................................no config at /tmp/tmpv0f26s1k/nope.json - run `jobhunt-agent init --host user@host` first
+.............no config at /tmp/tmp7n0hgy2i/nope.json - run `jobhunt-agent init --host user@host` first
+.....................................................................................................................................................................................<frozen importlib._bootstrap_external>:753: ResourceWarning: unclosed <socket.socket fd=4, family=2, type=1, proto=0, laddr=('127.0.0.1', 37651)>
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+..nothing to send: pass --text or --test
+.../home/ubuntu/jobhunt-agent/engine/notify/notify.py:293: ResourceWarning: unclosed <socket.socket fd=4, family=2, type=1, proto=0, laddr=('127.0.0.1', 37949)>
+  class Notifier:
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/ubuntu/jobhunt-agent/engine/notify/notify.py:293: ResourceWarning: unclosed <socket.socket fd=5, family=2, type=1, proto=0, laddr=('127.0.0.1', 40451)>
+  class Notifier:
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+......./usr/lib/python3.12/selectors.py:199: ResourceWarning: unclosed <socket.socket fd=4, family=2, type=1, proto=0, laddr=('127.0.0.1', 40105)>
+  def __enter__(self):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.12/selectors.py:199: ResourceWarning: unclosed <socket.socket fd=5, family=2, type=1, proto=0, laddr=('127.0.0.1', 33501)>
+  def __enter__(self):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.12/selectors.py:199: ResourceWarning: unclosed <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 35333)>
+  def __enter__(self):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.12/selectors.py:199: ResourceWarning: unclosed <socket.socket fd=7, family=2, type=1, proto=0, laddr=('127.0.0.1', 46259)>
+  def __enter__(self):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.12/selectors.py:199: ResourceWarning: unclosed <socket.socket fd=8, family=2, type=1, proto=0, laddr=('127.0.0.1', 43793)>
+  def __enter__(self):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.12/selectors.py:199: ResourceWarning: unclosed <socket.socket fd=9, family=2, type=1, proto=0, laddr=('127.0.0.1', 41131)>
+  def __enter__(self):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.12/selectors.py:199: ResourceWarning: unclosed <socket.socket fd=10, family=2, type=1, proto=0, laddr=('127.0.0.1', 42027)>
+  def __enter__(self):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+...../usr/lib/python3.12/email/_header_value_parser.py:146: ResourceWarning: unclosed <socket.socket fd=4, family=2, type=1, proto=0, laddr=('127.0.0.1', 41231)>
+  return sum((x.all_defects for x in self), self.defects)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.12/email/_header_value_parser.py:146: ResourceWarning: unclosed <socket.socket fd=5, family=2, type=1, proto=0, laddr=('127.0.0.1', 44029)>
+  return sum((x.all_defects for x in self), self.defects)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.12/email/_header_value_parser.py:146: ResourceWarning: unclosed <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 37469)>
+  return sum((x.all_defects for x in self), self.defects)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.12/email/_header_value_parser.py:146: ResourceWarning: unclosed <socket.socket fd=7, family=2, type=1, proto=0, laddr=('127.0.0.1', 33987)>
+  return sum((x.all_defects for x in self), self.defects)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+.../usr/lib/python3.12/ast.py:52: ResourceWarning: unclosed <socket.socket fd=4, family=2, type=1, proto=0, laddr=('127.0.0.1', 42175)>
+  return compile(source, filename, mode, flags,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.12/ast.py:52: ResourceWarning: unclosed <socket.socket fd=5, family=2, type=1, proto=0, laddr=('127.0.0.1', 35991)>
+  return compile(source, filename, mode, flags,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+.......<frozen importlib._bootstrap>:75: ResourceWarning: unclosed <socket.socket fd=4, family=2, type=1, proto=0, laddr=('127.0.0.1', 36463)>
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+........F..s/usr/lib/python3/dist-packages/yaml/error.py:6: ResourceWarning: unclosed <socket.socket fd=11, family=2, type=1, proto=0, laddr=('127.0.0.1', 45357)>
+  def __init__(self, name, index, line, column, buffer, pointer):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3/dist-packages/yaml/error.py:6: ResourceWarning: unclosed <socket.socket fd=8, family=2, type=1, proto=0, laddr=('127.0.0.1', 33383)>
+  def __init__(self, name, index, line, column, buffer, pointer):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3/dist-packages/yaml/error.py:6: ResourceWarning: unclosed <socket.socket fd=6, family=2, type=1, proto=0, laddr=('127.0.0.1', 42829)>
+  def __init__(self, name, index, line, column, buffer, pointer):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+........................................................F..................................................................F...F......................................................................
+======================================================================
+FAIL: test_dry_run_exits_zero_and_leaves_the_workspace_byte_identical (tests.test_ops_scripts.TestDryRunWritesNothing.test_dry_run_exits_zero_and_leaves_the_workspace_byte_identical) (script='pipeline_watchdog.sh', args='--config /tmp/ops-selftest-j3nwdaxx/tenant.yaml --workspace /tmp/ops-selftest-j3nwdaxx/home/hunts/ops-selftest --dry-run')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/jobhunt-agent/tests/test_ops_scripts.py", line 423, in test_dry_run_exits_zero_and_leaves_the_workspace_byte_identical
+    self.assertEqual(r.returncode, 0,
+AssertionError: 1 != 0 : pipeline_watchdog.sh ['--dry-run'] exited 1: PIPELINE WATCHDOG
+
+SWAP IN USE: 933 MB swapped (memory pressure)
+context:
+unit check skipped: ops.watch.units is empty in /tmp/ops-selftest-j3nwdaxx/tenant.yaml
+stuck-run check skipped: no executions db at /tmp/ops-selftest-j3nwdaxx/home/.hermes/profiles/ops-selftest/cron/executions.db
+backup check 
+
+======================================================================
+FAIL: test_pipeline_watchdog_is_quiet_when_healthy (tests.test_ops_scripts.TestWatchdogs.test_pipeline_watchdog_is_quiet_when_healthy)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/jobhunt-agent/tests/test_ops_scripts.py", line 215, in wrapper
+    return fn(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/jobhunt-agent/tests/test_ops_scripts.py", line 839, in test_pipeline_watchdog_is_quiet_when_healthy
+    self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+AssertionError: 1 != 0 : PIPELINE WATCHDOG
+
+SWAP IN USE: 933 MB swapped (memory pressure)
+context:
+unit check skipped: ops.watch.units is empty in /tmp/ops-selftest-6i79dwhc/tenant.yaml
+stuck-run check skipped: no executions db at /tmp/ops-selftest-6i79dwhc/home/.hermes/profiles/ops-selftest/cron/executions.db
+backup check skipped: no archive in /tmp/ops-selftest-6i79dwhc/home/hunts/ops-selftest/data/backups yet
+sheets mirror check skipped: no sync stamp at /tmp/ops-selftest-6i79dwhc/home/hunts/ops-selftest/data/ops/sheets_sync_stamp.json
+
+Checked on hermes-vm at 2026-09-22 22:39 UTC.
+pipeline_watchdog status=broken problems=1 dry_run=0
+
+
+======================================================================
+FAIL: test_every_repo_path_a_file_names_exists (tests.test_ship_clean.TestStaleReferences.test_every_repo_path_a_file_names_exists)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/jobhunt-agent/tests/test_ship_clean.py", line 344, in test_every_repo_path_a_file_names_exists
+    self.assertEqual(missing, {}, f"references to paths that do not exist: {missing}")
+AssertionError: {'engine/tools/prompt_playbook.py': ['provisioning/provision_tenant.py:57']} != {}
+- {'engine/tools/prompt_playbook.py': ['provisioning/provision_tenant.py:57']}
++ {} : references to paths that do not exist: {'engine/tools/prompt_playbook.py': ['provisioning/provision_tenant.py:57']}
+
+======================================================================
+FAIL: test_the_ops_dry_run_test_passes_with_a_dirty_stdin (tests.test_ship_clean.TestTheGateIsHermetic.test_the_ops_dry_run_test_passes_with_a_dirty_stdin)
+mail_signature.py is a stdin filter. It used to inherit the runner's stdin, so a launcher
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/jobhunt-agent/tests/test_ship_clean.py", line 521, in test_the_ops_dry_run_test_passes_with_a_dirty_stdin
+    self.assertEqual(r.returncode, 0, r.stdout[-600:] + r.stderr[-600:])
+AssertionError: 1 != 0 : ine 423, in test_dry_run_exits_zero_and_leaves_the_workspace_byte_identical
+    self.assertEqual(r.returncode, 0,
+AssertionError: 1 != 0 : pipeline_watchdog.sh ['--dry-run'] exited 1: PIPELINE WATCHDOG
+
+SWAP IN USE: 933 MB swapped (memory pressure)
+context:
+unit check skipped: ops.watch.units is empty in /tmp/ops-selftest-71nbwytr/tenant.yaml
+stuck-run check skipped: no executions db at /tmp/ops-selftest-71nbwytr/home/.hermes/profiles/ops-selftest/cron/executions.db
+backup check 
+
+----------------------------------------------------------------------
+Ran 2 tests in 1.588s
+
+FAILED (failures=1)
+
+
+----------------------------------------------------------------------
+Ran 732 tests in 85.093s
+
+FAILED (failures=4, skipped=1)
+[notify:jane-doe] selftest:1790116746: jobhunt-agent self-test at 2026-09-22 22:39: this channel works. Nothing to do.
+[notify:jane-doe] selftest:1790116746: jobhunt-agent self-test at 2026-09-22 22:39: this channel works. Nothing to do.
+[notify:jane-doe] selftest:1790116748: jobhunt-agent self-test at 2026-09-22 22:39: this channel works. Nothing to do.
+[notify:jane-doe] selftest:1790116749: jobhunt-agent self-test at 2026-09-22 22:39: this channel works. Nothing to do.
+[notify:jane-doe] selftest:1790116749: jobhunt-agent self-test at 2026-09-22 22:39: this channel works. Nothing to do.
+jobhunt-agent 1.0.0 on Linux 6.17.0-1020-oracle
+config    : /tmp/tmpnlpjbpb1/config.json
+host      : u@h
+dashboard : remote 127.0.0.1:8787  ->  local 43013
+tenant    : selfhost
+token     : not set (read-only dashboard)
+ssh       : /usr/bin/ssh -N -o ExitOnForwardFailure=yes -o ServerAliveInterval=30 -o ServerAliveCountMax=3 -o StrictHostKeyChecking=accept-new -o BatchMode=yes -L 43013:127.0.0.1:8787 -i /definitely/not/here u@h
+
+PROBLEMS:
+  - the ssh key in the config does not exist: /definitely/not/here
+jobhunt-agent 1.0.0 on Linux 6.17.0-1020-oracle
+config    : /tmp/tmp8fzvxk1p/config.json
+host      : u@h
+dashboard : remote 127.0.0.1:8787  ->  local 54129
+tenant    : selfhost
+token     : not set (read-only dashboard)
+ssh       : /usr/bin/ssh -N -o ExitOnForwardFailure=yes -o ServerAliveInterval=30 -o ServerAliveCountMax=3 -o StrictHostKeyChecking=accept-new -o BatchMode=yes -L 54129:127.0.0.1:8787 u@h
+
+config looks usable
+  icon.png  14398 bytes
+  icon-256.png  2596 bytes
+  icon.ico  5884 bytes
+  icon.iconset/ (for iconutil)
+wrote /tmp/tmpoi_4gbmt
+jobhunt-agent 1.0.0 on Linux aarch64
+repository: example-owner/jobhunt-agent
+route     : GitHub API (public release, no credentials)
+latest    : v9.9.9 (https://example.invalid/v9.9.9)
+plan      : 1.0.0 -> 9.9.9
+  download: https://example.invalid/jobhunt-agent-9.9.9-linux-aarch64.AppImage
+  save to : /tmp/jha-update-61ty2mji/jobhunt-agent-9.9.9-linux-aarch64.AppImage
+  verify  : sha256 0000000000000000000000000000000000000000000000000000000000000000
+  then    : mark it executable: replace your old file with it and double-click
+jobhunt-agent 1.0.0 on Linux aarch64
+repository: example-owner/jobhunt-agent
+route     : GitHub API (public release, no credentials)
+latest    : v9.9.9 (https://example.invalid/v9.9.9)
+jobhunt-agent 1.0.0 on Linux aarch64
+repository: example-owner/jobhunt-agent
+route     : GitHub API (public release, no credentials)
+latest    : v9.9.9 (https://example.invalid/v9.9.9)
+jobhunt-agent 1.0.0 on Linux aarch64
+jobhunt-agent 1.0.0 on Linux aarch64
+repository: example-owner/jobhunt-agent
+route     : GitHub API (public release, no credentials)
+latest    : v9.9.9 (https://example.invalid/v9.9.9)
+jobhunt-agent 1.0.0 on Linux aarch64
+repository: example-owner/jobhunt-agent
+route     : gh CLI (authenticated: private or API-hidden release)
+latest    : v1.0.1-rc1 (https://example.invalid/v1.0.1-rc1)
+[notify:jha-notify-sq1n9zku] k: hi
+[notify:jha-notify-v5x7aevb] k: hello world
+{
+  "channels": [
+    "local"
+  ],
+  "email": {
+    "mode": "https",
+    "provider": "resend",
+    "from": "",
+    "to": "",
+    "from_name": "",
+    "api_key_env": "EMAIL_API_KEY",
+    "api_key_present": false,
+    "automation_wording": "stripped from every subject and body before sending"
+  },
+  "human_wording_enforced": true,
+  "telegram": {
+    "chat_id": "",
+    "token_present": false,
+    "token_source": "none"
+  },
+  "quiet_hours": [],
+  "sent": 0,
+  "failed": 0
+}
+[notify:jha-notify-hgkg9r_p] hi: hi
+{
+  "local": {
+    "ok": true,
+    "channel": "local",
+    "ids": []
+  }
+}
+  cp /home/ubuntu/jobhunt-agent/engine/gates/eu_scope_gate.py -> /tmp/jha-ws-fdfbbcqp/gates/eu_scope_gate.py
+  cp /home/ubuntu/jobhunt-agent/engine/gates/effort_split.py -> /tmp/jha-ws-fdfbbcqp/gates/effort_split.py
+  cp /home/ubuntu/jobhunt-agent/engine/gates/dutch_gate.py -> /tmp/jha-ws-fdfbbcqp/gates/dutch_gate.py
+  cp /home/ubuntu/jobhunt-agent/engine/gates/row_gate.py -> /tmp/jha-ws-fdfbbcqp/gates/row_gate.py
+  cp /home/ubuntu/jobhunt-agent/engine/gates/ping_gate.py -> /tmp/jha-ws-fdfbbcqp/gates/ping_gate.py
+  cp /home/ubuntu/jobhunt-agent/engine/gates/email_guard.py -> /tmp/jha-ws-fdfbbcqp/gates/email_guard.py
+  cp /home/ubuntu/jobhunt-agent/engine/gates/otp_fetch.py -> /tmp/jha-ws-fdfbbcqp/gates/otp_fetch.py
+  cp /home/ubuntu/jobhunt-agent/engine/gates/language_gate.py -> /tmp/jha-ws-fdfbbcqp/gates/language_gate.py
+  cp /home/ubuntu/jobhunt-agent/engine/gates/interview_backoff.py -> /tmp/jha-ws-fdfbbcqp/gates/interview_backoff.py
+  cp /home/ubuntu/jobhunt-agent/engine/tools/jt.py -> /tmp/jha-ws-fdfbbcqp/tools/jt.py
+  cp /home/ubuntu/jobhunt-agent/engine/tools/batch_manifest.py -> /tmp/jha-ws-fdfbbcqp/tools/batch_manifest.py
+  cp /home/ubuntu/jobhunt-agent/engine/tools/verify_tracker.py -> /tmp/jha-ws-fdfbbcqp/tools/verify_tracker.py
+  cp /home/ubuntu/jobhunt-agent/engine/tools/prune_rejected.py -> /tmp/jha-ws-fdfbbcqp/tools/prune_rejected.py
+  cp /home/ubuntu/jobhunt-agent/engine/notify/notify.py -> /tmp/jha-ws-fdfbbcqp/tools/notify.py
+  cp /home/ubuntu/jobhunt-agent/engine/notify/send_alert.py -> /tmp/jha-ws-fdfbbcqp/tools/send_alert.py
+  cp /home/ubuntu/jobhunt-agent/engine/notify/apply_email.py -> /tmp/jha-ws-fdfbbcqp/tools/apply_email.py
+  cp /home/ubuntu/jobhunt-agent/engine/build_tracker.template.py -> /tmp/jha-ws-fdfbbcqp/build_tracker.py
+sys:1: ResourceWarning: unclosed <socket.socket fd=3, family=2, type=1, proto=0, laddr=('127.0.0.1', 35879)>

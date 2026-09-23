@@ -1,0 +1,47 @@
+[
+ {
+  "name": "nhung-job-hunt",
+  "chars": 58969,
+  "chars_before": 65334,
+  "tokens_per_call": 14633,
+  "sections_inline": 39,
+  "sections_moved": 7,
+  "playbook_chars": 10944,
+  "playbook_files": [
+   "contact-discovery.md",
+   "effort-split.md",
+   "scope-and-countries.md",
+   "verification-and-cv.md"
+  ],
+  "missing_files": [],
+  "missing_must_survive": [],
+  "missing_asserted_in_prompt": [],
+  "chars_saved": 6365,
+  "tokens_saved_per_call": 1579,
+  "tokens_saved_per_sweep": 91605,
+  "tokens_saved_per_day": 824449
+ },
+ {
+  "name": "vishal-job-hunt",
+  "chars": 62917,
+  "chars_before": 69772,
+  "tokens_per_call": 15612,
+  "sections_inline": 37,
+  "sections_moved": 7,
+  "playbook_chars": 11438,
+  "playbook_files": [
+   "contact-discovery.md",
+   "effort-split.md",
+   "lessons.md",
+   "scope-and-countries.md",
+   "verification-and-cv.md"
+  ],
+  "missing_files": [],
+  "missing_must_survive": [],
+  "missing_asserted_in_prompt": [],
+  "chars_saved": 6855,
+  "tokens_saved_per_call": 1701,
+  "tokens_saved_per_sweep": 98658,
+  "tokens_saved_per_day": 887918
+ }
+]

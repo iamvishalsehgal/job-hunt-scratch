@@ -1,0 +1,230 @@
+# tenant.yaml - one candidate (one paying subscriber) per tenant
+
+# Everything a subscriber is allowed to change about their own hunt lives here.
+# The engine reads this file only; no per-candidate logic is hardcoded anywhere else.
+
+tenant:
+  slug: jane-doe                  # lowercase, used for folder/profile names
+  display_name: "Jane Doe"
+  timezone: Europe/Amsterdam
+
+# ---------------------------------------------------------------- who they are
+candidate:
+  full_name: "Jane Doe"
+  email: "jane.doe@example.com"
+  phone: "+31 6 12345678"
+  city: "Utrecht"
+  country: "NL"
+  date_of_birth: "1995-01-01"     # leave empty to have the engine skip any form that demands it
+  linkedin: "https://linkedin.com/in/jane-doe"
+  github: "https://github.com/jane-doe"
+  degree_institution: "Utrecht University"   # shown next to the degree in the prompt facts
+  current_employer: "Acme BV"                # also add it to work_authorization.never_apply_to below
+  languages:
+    - { name: English, level: fluent }
+    - { name: Dutch, level: beginner }
+
+# ---------------------------------------------------------------- what they want
+targeting:
+  # Country scope. NL and the EU members listed here are swept; everything else is dropped.
+  # The engine refuses to leave the EU (see scope.eu_only).
+  countries:
+    primary: ["NL"]              # gets `effort_split.primary_share` of every sweep
+    secondary: ["DE", "IE"]      # swept every run, after primary
+    rotation: ["SE", "DK", "AT", "ES", "FR", "PL"]   # ONE per sweep, round-robin
+  interview_backoff:             # while an interview is pending, apply less and say so
+    enabled: true                # the behaviour is the default; a subscriber can turn it off
+    rate: 0.4                    # share of the usual per-run cap (0.4 = 60% fewer applications)
+  effort_split:
+    primary_share: 0.8           # 80/20 default; the engine enforces it with gates/effort_split.py
+  roles:                         # the keyword matrix for discovery (the "role" dial)
+    - Data Engineer
+    - Analytics Engineer
+    - Data Platform Engineer
+    - Integration Engineer
+    - Snowflake Engineer
+  role_families:                 # optional tag -> CV emphasis block keyed in cv/emphasis/
+    knowledge_graph: ["Knowledge Graph Engineer", "Ontology Engineer", "Semantic Data Engineer"]
+  seniority: [medior, senior]    # informational; years-of-experience is never a hard filter
+  hard_cap_years: 6              # postings asking for more than this are skipped
+  remote_ok: true
+  relocation_ok: true
+
+# ---------------------------------------------------------------- the money dial
+salary:
+  # NEUTRAL BY DEFAULT. These are collected during the first-run setup and stored per account; the template
+  # must never ship one person's figures, because the money dial is what an application email quotes.
+  currency: EUR
+  period: month
+  current_gross: 0               # set during setup: used only to decide "is this an upgrade?"
+  apply_above_current: true      # apply when the posted gross is above current
+  target_floor: 0                # set during setup: never quote below this
+  ask_range: [0, 0]              # set during setup: the standing quote
+  legal_floor: 0                 # set during setup: jurisdiction-specific transfer threshold
+  skip_when_posted_max_below: true
+
+# ---------------------------------------------------------------- authorization
+work_authorization:
+  country: NL
+  permit: "highly skilled migrant (kennismigrant)"
+  permit_expires: "2026-12-03"
+  sponsor_register_required: true        # NL only: IND recognised-sponsor register
+  sponsor_register_url: "https://ind.nl/en/public-register-recognised-sponsors/public-register-work"
+  sponsor_register_local: "data/register_names.txt"
+  foreign_role_template: >               # used for any posting outside the permit country
+    "My residence permit is a Dutch highly-skilled-migrant permit. For a role based in {country}
+     I would need a work permit for {country}, which I would need the employer to support.
+     I am open to relocating."
+  self_employment_allowed: false         # ZZP/freelance requests are a hard no when false
+  never_apply_to: ["Acme BV"]            # employer names to blacklist (must include candidate.current_employer)
+
+# ---------------------------------------------------------------- language rules
+language_gate:
+  skip_explicit_local_language: true     # a posting demanding Dutch fluency in NL is a hard skip
+  never_skip_english_first: true
+  local_languages:                       # the gate reads this, never a hardcoded list
+    NL: [Dutch]
+    DE: [German]
+    FR: [French]
+    ES: [Spanish]
+    IT: [Italian]
+    SE: [Swedish]
+    DK: [Danish]
+
+# ---------------------------------------------------------------- shipping rules
+delivery:
+  application_route: own_portal          # never a job-board "easy apply"
+  sheets:                                # the Google Sheet IS the tracker: provisioning renders this
+    id: "REPLACE-WITH-YOUR-SHEET-ID"     # id into every prompt's tracker link, so an empty value
+                                         # would hand the person a broken link. It is the <id> in
+                                         # https://docs.google.com/spreadsheets/d/<id>/edit
+  failed_apply_route: hr_email         # when the portal cannot be driven automatically:
+                                       #   hr_email = the engine emails HR (application_email must
+                                       #     be enabled; one application, one follow-up, no reply)
+                                       #   telegram_apply_link = the candidate gets the apply link and
+                                       #     the tailored documents on Telegram and applies manually
+  tailored_cv_per_role: true
+  cover_letter_per_role: true
+  email_read_only: true                  # the engine reads mail; the only employer-facing sends are
+                                         # delivery.application_email below (one application, one
+                                         # follow-up, never a reply to an employer)
+  notifications:
+    # Delivery channels. Any combination; at least one must be enabled.
+    channels: [telegram]                 # telegram | email | webhook | local
+    outbound_only: true                  # nothing polls anything; every send is a stateless POST
+    ping_on: [interview_invite, offer, action_required]
+    quiet_hours: ["22:00", "07:00"]
+    dedupe: true                         # one alert per position per round, across channels
+
+    telegram:
+      token_env: TELEGRAM_BOT_TOKEN      # or token_file for a mode-600 file (no secret in env)
+      token_file: ""
+      chat_id: ""                        # required for telegram
+
+    # Email = a message TO the candidate (interview invite, offer, action required).
+    # NEVER describe an alert as automated. No "automated message", no "auto-generated", no bot/robot
+    # wording, no "do not reply": the mail reads like a normal note from a person. notify.py strips any
+    # such sentence from the subject and body before sending, refuses a no-reply/automated From address
+    # or display name, and records every removal in the ledger.
+    # The engine still never sends mail from the candidate's mailbox: this uses a transactional
+    # provider over HTTPS (port 443), and the recipient must be one of the tenant's own addresses.
+    email:
+      mode: https                        # https (default) | smtp (opt-in, needs SMTP egress open)
+      provider: resend                   # resend | postmark | any resend-compatible endpoint
+      endpoint: ""                       # override for an EU provider or a self-hosted relay
+      # from must NOT be a no-reply/automated address; from_name is what the reader sees
+      from: "alerts@yourdomain.tld"
+      from_name: "Jane's job hunt"
+      to: ""                             # defaults to candidate.email
+      allow: []                          # extra allowed recipients (e.g. a partner's address)
+      api_key_env: EMAIL_API_KEY         # read from the environment; never stored in this file
+      send_pdf_attachments: true         # attach the tailored CV / JD / invite on interview alerts
+      # smtp mode only (leave host empty unless you have deliberately opened 465/587):
+      host: ""
+      port: 587
+      user: ""
+      password_env: SMTP_PASSWORD        # must NOT be the candidate's mailbox password (refused)
+      starttls: true
+
+    webhook:
+      url: ""                            # receives {"key","text","detail"} as JSON
+
+  # The ONE channel that writes to an employer, and only when a portal application fails or was
+  # impossible (or when email was the only route). "No double mail": one application email, one
+  # follow-up, never a reply to an employer, and nothing else. It sends as the candidate
+  # from their own mailbox over the Gmail API (users.messages.send, HTTPS, gmail.send scope), and the
+  # mail never mentions automation, agents or systems. Off unless a candidate asks for it.
+  #
+  # The runtime reads this block from the candidate's own notify.json; provisioning carries it there.
+  # The per-role ledger (data/apply-email-ledger.json) is the memory that makes a repeat a refusal,
+  # and every refusal is one printed line with a non-zero exit.
+  application_email:
+    enabled: true                      # needed only for the hr_email fallback route above; set
+                                       # false to use telegram_apply_link instead. Sending is always
+                                       # a fallback after a failed automatic apply, never a first
+                                       # choice, and replies are refused.
+    from_name: ""                      # display name the employer sees; defaults to candidate.full_name
+    signature: ""                      # e.g. "Jane Doe | jane@example.com | +31 6 12345678"
+                                       # defaults to name | email | phone
+    max_per_run: 1                     # hard cap on sends per run
+    require_attachments: true          # refuse to send without cv.pdf + cover-letter.pdf
+    followup_after_business_days: 7    # the wait before the single follow-up becomes due
+    availability: ""                   # one line the built-in templates use, e.g. "available from 1 December 2026"
+
+# ---------------------------------------------------------------- cadence (cost dial)
+schedule:
+  sweep: "every 180m"                    # the plan defines the allowed values
+  mailbox: "every 20m"                   # monitor-gated: the agent only wakes on a mail change
+  backup: "0 4 * * 0"
+  sheets_sync: "every 360m"
+
+# ---------------------------------------------------------------- the spend dial
+# The model layer's budget: how much THIS ACCOUNT may spend on models in one day, and what happens when
+# that is reached. Measured, never estimated - every run appends its own measured usage (tokens, model,
+# run id, cost) to the account's ledger (data/usage.jsonl in the workspace), and a sweep asks
+# `gates/model_budget.py ask --plan-cap <N>` before it spends anything. The gate answers with the volume
+# this run may use, and with the one sentence that accounts for it; the Alerts view and the Cost panel
+# both show that sentence and today's figure, so a slower hunt is never silent.
+#
+# A DAY, not a month: a ceiling checked once a month cannot stop anything mid-month. For scale, this
+# account's own measured cost is $0.01-0.14 per run, and the plans cost $30/$55/$109 a month, so
+# $1.00/day is about the cheapest plan's own cost basis. Raise it to spend more.
+budget:
+  daily_usd: 1.00          # dollars per day, UTC. 0 is refused - use on_exceed stop to stop instead
+  on_exceed: throttle      # warn = say so | throttle = apply at throttle_rate of the run's cap | stop = skip
+  throttle_rate: 0.25      # share of the usual volume while the day's budget is spent (0 < rate <= 1)
+
+# ---------------------------------------------------------------- billing link
+billing:
+  plan: pro                              # starter | pro | scale - prices in pricing.yaml
+  license_key: ""                        # issued by the billing service; empty = trial/self-hosted
+  usage_reporting: true                  # the engine writes usage to usage/<slug>.jsonl for metering
+  # Optional billing links, shown on the dashboard Plan panel. Left commented out on purpose: they are
+  # optional, and a live empty key would collide with anyone appending their own value to this file
+  # (last key wins in YAML, so the empty one would silently win).
+  # checkout_url: "https://checkout.example/abc"    # your Stripe Checkout or pricing page
+  # portal_url: "https://billing.example/portal"    # the Stripe customer portal, where invoices live
+
+# ---------------------------------------------------------------- operations
+# Everything the unattended ops half reads. All keys are optional; a missing block means "do nothing",
+# never "guess".
+ops:
+  watch:                                 # the agency/employer watchlist job
+    keywords:                            # extra keywords for agency postings, added to targeting.roles
+      - agency
+    agencies: []                         # named agencies to watch; empty = the watchlist job does nothing
+    cadence: "0 8 * * *"                 # how often the watchlist job runs
+  backup:
+    destinations: []                     # extra paths to include in the weekly backup tarball
+    keep: 8                              # how many weekly tarballs to retain
+  keepalive:
+    enabled: true                        # memory ballast + CPU spinner against Always-Free reclaim
+    memory_mb: 4096                      # resident ballast to hold on a free instance
+  oauth_watchdog:
+    max_token_age_days: 7                # a Testing-mode Google token expires after 7 days
+
+# ---------------------------------------------------------------- paths
+# {slug} is substituted per account: one host, many users, one directory each.
+paths:
+  workspace: "~/hunts/{slug}"            # candidate folder (tracker, packs, gates)
+  profile: "{slug}"                      # Hermes profile name
